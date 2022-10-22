@@ -21,3 +21,7 @@
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
+
+@mixin bodyReset() {
+    margin: 0;
+}

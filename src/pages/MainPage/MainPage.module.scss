@@ -1,5 +1,12 @@
 @import "/styles/mixins";
 @import "/styles/palette";
+
+body {
+  min-height: 100vh;
+
+  background: var(--background-gradient);
+}
+
 .centering-wrapper {
   @include center-content-fullscreen;
 }

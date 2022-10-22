@@ -1,4 +1,5 @@
 @import "/styles/resetMixins";
+@import "/styles/mixins";
 
 $trueSize: 160px;
 $borderWidth: 36px;
@@ -10,6 +11,7 @@ $innerSize: $trueSize - $borderWidth;
 .gestureCircle {
   @include buttonReset();
   position: relative;
+  cursor: pointer;
 
   width: $innerSize;
   height: $innerSize;
@@ -17,10 +19,14 @@ $innerSize: $trueSize - $borderWidth;
   border-radius: 50%;
   box-shadow: inset 0 $shadowThickness var(--shadow-light);
 
-  img { width: $iconSize; }
+  img {
+    @include disableGrabAndSelect();
+    width: $iconSize;
+  }
 
   &::before {
     content: "";
+    cursor: pointer;
     z-index: -1;
     border-radius: 50%;
 
@@ -34,6 +40,7 @@ $innerSize: $trueSize - $borderWidth;
 
     background: var(--paper-gradient);
 
-    box-shadow: inset 0 (-$shadowThickness) 0 0 var(--shadow-light);
+    box-shadow: inset 0 (-$shadowThickness) 0 0 var(--shadow-light),
+      0 $shadowThickness var(--shadow-light);
   }
 }

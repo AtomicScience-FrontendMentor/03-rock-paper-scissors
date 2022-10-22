@@ -6,3 +6,9 @@
   width: 100vw;
   height: 100vh;
 }
+
+@mixin disableGrabAndSelect() {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
