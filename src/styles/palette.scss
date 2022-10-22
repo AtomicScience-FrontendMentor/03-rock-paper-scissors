@@ -3,4 +3,12 @@
 :root {
   --text-color: #{$oc-gray-8};
   --secondary-text-color: #{$oc-gray-6};
+
+  --scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paper-gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --gesture-background: #{$oc-gray-0};
+
+  --shadow-light: hsla(0, 0%, 0%, 0.149);
+  --shadow-medium: hsla(0, 0%, 0%, 0.302);
 }

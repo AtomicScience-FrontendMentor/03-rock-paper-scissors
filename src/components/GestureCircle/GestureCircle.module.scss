@@ -1,0 +1,39 @@
+@import "/styles/resetMixins";
+
+$trueSize: 160px;
+$borderWidth: 36px;
+$iconSize: 50px;
+$shadowThickness: 6px;
+
+$innerSize: $trueSize - $borderWidth;
+
+.gestureCircle {
+  @include buttonReset();
+  position: relative;
+
+  width: $innerSize;
+  height: $innerSize;
+  background-color: var(--gesture-background);
+  border-radius: 50%;
+  box-shadow: inset 0 $shadowThickness var(--shadow-light);
+
+  img { width: $iconSize; }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    border-radius: 50%;
+
+    width: $trueSize;
+    height: $trueSize;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background: var(--paper-gradient);
+
+    box-shadow: inset 0 (-$shadowThickness) 0 0 var(--shadow-light);
+  }
+}
