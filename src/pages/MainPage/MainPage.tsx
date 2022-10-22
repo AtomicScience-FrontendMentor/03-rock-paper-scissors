@@ -10,6 +10,8 @@ export const MainPage: React.FC<MainPageProps> = (props) => {
   const logic = useMainPageLogic(props);
 
   return <div className={styles['centering-wrapper']}>
-    <GestureCircle/>
+    <GestureCircle gestureType={'rock'}/>
+    <GestureCircle gestureType={'paper'}/>
+    <GestureCircle gestureType={'scissors'}/>
   </div>;
 };
